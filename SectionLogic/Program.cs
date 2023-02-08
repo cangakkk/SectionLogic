@@ -7,8 +7,9 @@ namespace SectionLogic
     {
         static void Main(string[] args)
         {
-            Grade();
-            star();
+            //Grade();
+            //star();
+            piramidaTerbalik();
         }
 
         static void Grade()
@@ -81,6 +82,31 @@ namespace SectionLogic
                 }
                 Console.WriteLine("");
             }
+        }
+
+        static void piramidaTerbalik()
+        {
+            Console.Write("Input tinggi piramida terbalik= ");
+            int n = Convert.ToInt32(Console.ReadLine().Trim());
+
+            int spasi = 0;
+            int bintang = ((n - 1) * 2) + 1;
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < spasi; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (int j = 0; j < bintang; j++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+                spasi += 2;
+                bintang -= 2;
+            }
+
         }
     }
 }
